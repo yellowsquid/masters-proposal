@@ -1,4 +1,4 @@
-% Created 2021-11-18 Thu 12:35
+% Created 2021-11-18 Thu 12:40
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -40,19 +40,19 @@
 \vspace{1em}
 
 \begin{abstract}
-All good implementations of cryptographic algorithms must be correct,
-side-channel free and fast. Most cryptographic libraries focus on maximising 
-speed by writing hand-tuned assembly. This can introduce subtle bugs that
-invalidate correctness or introduce side-channels. Whilst tools exist to help
-formally verify these algorithms, none are designed to target the recent
-M-profile Vector Extension for the Armv8.1-M architecture. My project seeks to
-define semantics for these vector instructions, designed to be used for formal
-verification of software. I will use these semantics to formally verify the
-correctness of hand-written assembly for cryptographic applications.
+All good implementations of any algorithm should be correct and fast. To
+maximise performance some algorithms are written in hand-tuned assembly. This
+can introduce subtle bugs that invalidate correctness or other safety
+properties. Whilst tools exist to help formally verify these algorithms, none
+are designed to target the recent M-profile Vector Extension for the Armv8.1-M
+architecture. My project seeks to define operational and axiomatic semantics for
+these vector instructions, designed to be used for formal verification of
+software. I will use these semantics to formally verify the correctness of
+hand-written assembly for cryptographic applications.
 \end{abstract}
 
 \section{Introduction, approach and outcomes}
-\label{sec:org73235ed}
+\label{sec:orgdeb07e2}
 
 In almost all cases, the best implementation of an algorithm will be both
 correct and fast. If an implementation is not correct, then it implements a
@@ -105,7 +105,7 @@ Becker et al.\ \cite{cryptoeprint_2021_998}. These include Barrett reduction,
 Montgomery multiplication and the number-theoretic transform.
 
 \section{Workplan}
-\label{sec:org96415de}
+\label{sec:org4e6f10a}
 
 \begin{center}
 \begin{tabular}{rrp{0.7\linewidth}}
