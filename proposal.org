@@ -32,6 +32,8 @@
 \vspace{1em}
 \centerline{\large Project Supervisor: Dr J. D. Yallop}
 \vspace{1em}
+\centerline{\large Co-Supervisors from Arm: D. P. Mulligan, H. Becker, G. F. Petri}
+\vspace{1em}
 #+end_export
 
 #+begin_abstract
@@ -79,12 +81,11 @@ hand-written assembly for cryptographic applications.
   converted into pure assembly language output, as well as a proof that all the
   assertions in the input hold.
 
-  An often-overlooked architecture in the field of formal verification is
-  Armv8.1-M. This instruction set is designed for use by microcontrollers, which
-  operate in a resource-constrained environment. In particular the recent
-  M-profile Vector Extension (MVE), which provides SIMD instructions for
-  Armv8.1-M cores, has no known semantics suitable for the formal verification
-  of software.
+  An understudied architecture in the field of formal verification is Armv8.1-M.
+  This instruction set is designed for use by microcontrollers, which operate in
+  a resource-constrained environment. In particular the recent M-profile Vector
+  Extension (MVE), which provides SIMD instructions for Armv8.1-M cores, has no
+  known semantics suitable for the formal verification of software.
 
   My project is to resolve this issue by using Agda to develop a semantics for
   MVE instructions suitable for formal verification. This entails the design of
@@ -101,21 +102,21 @@ hand-written assembly for cryptographic applications.
 * Workplan
 
    #+attr_latex: :align rrp{0.7\linewidth}
-   |      Start |        End | Work                                                                                                                                                                   |
-   |------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | 2021-12-06 | 2021-12-19 | Familiarise myself with MVE instructions. Begin work on defining the operational semantics, focusing on representing machine state and auxiliary definitions.          |
-   | 2021-12-20 | 2022-01-02 | Break for Christmas and New Year's.                                                                                                                                    |
-   | 2022-01-03 | 2022-01-16 | Finish the definition of the operational semantics. Prove some useful lemmas regarding manipulating the structure of blocks of assembly.                               |
-   | 2022-01-17 | 2022-01-30 | Define the axiomatic semantics in the form of Hoare triples.                                                                                                           |
-   | 2022-01-31 | 2022-02-13 | Prove and equivalence between the operational and axiomatic semantics.                                                                                                 |
-   | 2022-02-14 | 2022-02-27 | Progress review. Begin formal verification of Barrett reduction.                                                                                                       |
-   | 2022-03-14 | 2022-03-27 | Formally verify an implementation of Montgomery multiplication.                                                                                                        |
-   | 2022-03-14 | 2022-03-27 | Begin work to formally verify one iteration of the number-theoretic transform, which is a form of discrete Fourier transform in the domain of integers modulo a prime. |
-   | 2022-03-28 | 2022-04-10 | Finish verification of one iteration of the number-theoretic transform.                                                                                                |
-   | 2022-04-11 | 2022-04-24 | Write-up.                                                                                                                                                              |
-   | 2022-04-25 | 2022-05-08 | Write-up.                                                                                                                                                              |
-   | 2022-05-09 | 2022-05-22 | Contingency weeks.                                                                                                                                                     |
-   | 2022-05-23 | 2022-05-27 | Submission. Begin work on presentation.                                                                                                                                |
+   |      Start |        End | Work                                                                                                                                                                                                                      |
+   |------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   | 2021-12-06 | 2021-12-19 | Familiarise myself with MVE instructions. Research semantics written in Agda for other architectures. Begin work on defining the operational semantics, focusing on representing machine state and auxiliary definitions. |
+   | 2021-12-20 | 2022-01-02 | Break for Christmas and New Year's.                                                                                                                                                                                       |
+   | 2022-01-03 | 2022-01-16 | Finish the definition of the operational semantics. Prove some useful lemmas regarding manipulating the structure of blocks of assembly.                                                                                  |
+   | 2022-01-17 | 2022-01-30 | Define the axiomatic semantics in the form of Hoare triples.                                                                                                                                                              |
+   | 2022-01-31 | 2022-02-13 | Prove and equivalence between the operational and axiomatic semantics.                                                                                                                                                    |
+   | 2022-02-14 | 2022-02-27 | Progress review. Begin formal verification of Barrett reduction.                                                                                                                                                          |
+   | 2022-03-14 | 2022-03-27 | Formally verify an implementation of Montgomery multiplication.                                                                                                                                                           |
+   | 2022-03-14 | 2022-03-27 | Begin work to formally verify one iteration of the number-theoretic transform, which is a form of discrete Fourier transform in the domain of integers modulo a prime.                                                    |
+   | 2022-03-28 | 2022-04-10 | Finish verification of one iteration of the number-theoretic transform.                                                                                                                                                   |
+   | 2022-04-11 | 2022-04-24 | Write-up.                                                                                                                                                                                                                 |
+   | 2022-04-25 | 2022-05-08 | Write-up.                                                                                                                                                                                                                 |
+   | 2022-05-09 | 2022-05-22 | Contingency weeks.                                                                                                                                                                                                        |
+   | 2022-05-23 | 2022-05-27 | Submission. Begin work on presentation.                                                                                                                                                                                   |
   
 #+begin_export latex
 \newpage
